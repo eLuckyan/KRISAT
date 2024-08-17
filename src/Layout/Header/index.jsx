@@ -22,7 +22,6 @@ const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 const mainNav = {
   "About Us": ["History", "About KRISAT", "Misson & Vision", "Board Members", "Governing Council", "From Principal Desk"],
-  "Admission":[""],
   "Farming":["Animal Husbandry", "Organic Field", "Wet Land", "Orchard", "Garden Land", "Dry Land"],
   "Academics":["Courses Offered", "Faculty", "Academic Calendar", "Class Timetable", "College Library", "Instructional Exam"],
   "Academic Activities":["NSS Programs", "Crop Production", "Short Tour", "Outdoor Visit", "Field Classes", "All India Study Tour"],
