@@ -81,7 +81,9 @@ const Header = (props) => {
             </span>
         </div>
         <div className="header-bottom">
-
+        {Object.keys(mainNav).map((keyName, index) => {
+          // console.log(keyName, index, mainNav[keyName])
+        })}
         </div>
         {/* <Box sx={{ display: "flex" }}>
           <CssBaseline />
