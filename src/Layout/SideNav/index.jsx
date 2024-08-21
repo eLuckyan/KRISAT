@@ -5,7 +5,7 @@ const SideNav = () => {
 
     return <>
         <nav>
-            <h2>SideNav</h2>
+            <h2></h2>
         </nav>
     </>
 }
