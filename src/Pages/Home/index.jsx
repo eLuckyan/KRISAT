@@ -4,7 +4,16 @@ import "./Home.scss";
 const Home = () => {
   return (
     <>
-      <h2>Home</h2>
+      <div className="home-about">
+        <div className="about-heading">
+          <h2>About KRISAT</h2>  
+        </div>
+        <div className="about-content">
+          <div className="content1">
+            
+          </div>
+        </div>
+      </div>
     </>
   );
 };

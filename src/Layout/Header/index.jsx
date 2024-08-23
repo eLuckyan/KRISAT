@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import ClgIcon from "../../Assets/Icons/ClgIcon";
 import { Menu, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import HeaderData from "../../Services/Utils/json/Header";
+import HeaderData from "../../services/utils/json/Header";
 
 const drawerWidth = 240;
 const Header = (props) => {
