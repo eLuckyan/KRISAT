@@ -1,0 +1,48 @@
+.gallery-img {
+  border-radius: 15px;
+  filter: brightness(0.6) !important;
+}
+
+.vertical-img {
+  height: calc(50vh + 24px) !important;
+}
+
+.gallery-calendar-icon {
+  color: white !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.gallery-calendar-div {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  z-index: 9999;
+}
+
+.gallery-calendar-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-calendar-section span {
+  color: white;
+  font-size: 12px;
+}
+
+.gallery-box-parent {
+  position: relative;
+}
+
+.gallery-collection-div {
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  margin: 20px;
+}
+
+.gallery-collection-section span{
+    color: white;
+}
