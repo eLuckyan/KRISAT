@@ -44,6 +44,8 @@ const Header = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const navigate = useNavigate()
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }} onClick={() => nav("/")}>
@@ -69,7 +71,7 @@ const Header = (props) => {
     <>
       <header className="header-toolbar">
         <div className="header-top">
-          <span className="header-top-left">
+          <span className="header-top-left" onClick={()=>navigate('/')}>
             <ClgIcon />
             <span className="header-college-name">
               <h2>Krishna College of Agriclture & Technology</h2>
@@ -171,7 +173,7 @@ const Header = (props) => {
               {drawer}
             </Drawer>
           </nav>
-        </Box> */}
+        </Box>  */}
       </header >
     </>
   );

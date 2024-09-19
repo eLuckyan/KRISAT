@@ -1,33 +1,76 @@
 import React from "react";
 import "./Home.scss";
-import content1 from "../../Assets/Images/1088523.jpg"
+import content1 from "../../Assets/Images/1088523.jpg";
+import banner from '../../Assets/Images/KRISAT.png'
+import logo from '../../Assets/Images/logo/clgLogo.png'
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
+import { Button } from "rsuite";
+import HomeContent from "../../services/utils/json/HomeContent";
+import SendIcon from '@mui/icons-material/Send';
 
 const Home = () => {
+  const { aboutContent } = HomeContent();
   return (
     <>
+      <div className="home-banner">
+         <div className="banner-inner-section">
+          <img src={logo} alt="logo" />
+          <span className="banner-content">
+            <h1>Sowing Seeds of Future</h1>
+            <p>
+              Affiliated by Tamil Nadu Agricultural university, Coimbatore, as per G.O.(Ms).No.98,Agriculture(AU) Department dt.29.12.2016, Counsel of Tamilnadu.
+            </p>
+          </span>
+         </div>
+          <Button className="button" variant="contained" endIcon={<SendIcon />}>EXPLORE &nbsp; </Button>
+      </div>
       <div className="home-about">
         <div className="about-heading">
-          <h2>About KRISAT</h2>  
+          <h2>About KRISAT</h2>
         </div>
         <div className="about-content">
-          <div className="content1">
-            <div className="content-header">
-              <img src={content1} alt="" className="image-container" />
-              <h3>Infrastructure</h3>
-            </div>
-            <div className="content-content">
-              <h5>
-              Well designed infrastructure with sophisticated needs to cater your professionals
-              </h5>
-              <br />
-              <p>
-              We value the space required to provide hands on training to budding Agricultural Professionals. We manifest a pattern...
-              </p>
-              <button>
-                Read more..
-              </button>
-            </div>
-          </div>
+        {aboutContent.map((content, index) => {
+          return (
+              <Card sx={{ maxWidth: 395 }} className="content1" key={index}>
+                <div className="content-header">
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={content.image}
+                    className="card-img"
+                  />
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    className="card-heading"
+                  >
+                    {content.title}
+                  </Typography>
+                </div>
+                <div className="content">
+                  <CardContent className="content-content">
+                    <Typography variant="body2" color="text.secondary">
+                      <h4>{content.subHeading}</h4>
+                      <p>{content.context}</p>
+                    </Typography>
+                  </CardContent>
+                  <CardActions className="card-actions">
+                    <Button size="small" className="button">
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </div>
+              </Card>
+          );
+        })}
         </div>
       </div>
     </>

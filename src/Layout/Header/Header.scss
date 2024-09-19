@@ -7,6 +7,9 @@
         width: 100%;
         justify-content: space-between;
         .header-top-left {
+            :hover{
+                cursor: pointer;
+            }
             width: 30%;
             display: flex;
             img {
