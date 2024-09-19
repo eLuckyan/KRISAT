@@ -90,6 +90,7 @@ const PhotoGallery = () => {
           justifyContent: "center",
           gap: "25px",
           flexWrap: "wrap",
+          margin: "50px 0px"
         }}
       >
         <Box
