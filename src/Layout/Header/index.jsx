@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import ClgIcon from "../../Assets/Icons/ClgIcon";
 import { Menu, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import HeaderData from "../../Services/Utils/json/Header";
+import HeaderData from "../../services/utils/json/Header";
 
 const drawerWidth = 240;
 const Header = (props) => {
@@ -43,6 +43,8 @@ const Header = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  const navigate = useNavigate()
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -69,7 +71,7 @@ const Header = (props) => {
     <>
       <header className="header-toolbar">
         <div className="header-top">
-          <span className="header-top-left">
+          <span className="header-top-left" onClick={()=>navigate('/')}>
             <ClgIcon />
             <span className="header-college-name">
               <h2>Krishna College of Agriclture & Technology</h2>
@@ -171,7 +173,7 @@ const Header = (props) => {
               {drawer}
             </Drawer>
           </nav>
-        </Box> */}
+        </Box>  */}
       </header >
     </>
   );
