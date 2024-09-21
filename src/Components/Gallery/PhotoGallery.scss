@@ -1,6 +1,16 @@
 .gallery-img {
   border-radius: 15px;
   filter: brightness(0.6) !important;
+  transition: 0.5s;
+}
+
+.gallery-img:hover {
+  filter: brightness(0.8) !important;
+  transition: 0.5s;
+  transform: scale(1.05);
+  .gallery-calendar-div {
+    z-index: 0;
+  }
 }
 
 .vertical-img {
@@ -17,7 +27,7 @@
   position: absolute;
   right: 0;
   margin: 10px;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .gallery-calendar-section {
@@ -43,6 +53,6 @@
   margin: 20px;
 }
 
-.gallery-collection-section span{
-    color: white;
+.gallery-collection-section span {
+  color: white;
 }
