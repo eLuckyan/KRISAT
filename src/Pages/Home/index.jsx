@@ -14,6 +14,7 @@ import { Button } from "rsuite";
 import HomeContent from '../../Services/Utils/json/HomeContent'; 
 import SendIcon from '@mui/icons-material/Send';
 import PhotoGallery from "../../Components/Gallery/PhotoGallery";
+import NewsLetterLabel from "../../Components/NewsLetterLabel/NewsLetterLabel";
 
 const Home = () => {
   const { aboutContent } = HomeContent();
@@ -75,6 +76,7 @@ const Home = () => {
         </div>
       </div>
       <PhotoGallery />
+      <NewsLetterLabel />
     </>
   );
 };

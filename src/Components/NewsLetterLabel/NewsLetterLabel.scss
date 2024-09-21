@@ -1,0 +1,26 @@
+.news-letter-label-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.news-letter-label-container{
+    display: flex;
+    background-color: #6A9142;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.news-letter-label-first span:first-child{
+    font-size: 22px;
+}
+
+.news-letter-label-first span:nth-child(2){
+    font-size: 14px;
+}
