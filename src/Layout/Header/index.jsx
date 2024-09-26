@@ -31,6 +31,8 @@ const Header = (props) => {
   //const open = Boolean(anchorEl);
   const [openMenuKey, setOpenMenuKey] = useState(null)
 
+  const navigate = useNavigate()
+
   const handleClick = (event, key) => {
     setAnchorEl(event.currentTarget);
     setOpenMenuKey(key)
@@ -44,7 +46,14 @@ const Header = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const navigate = useNavigate()
+  const handleNav = (menuItem, index) => {
+    console.log(menuItem, index)
+    if(menuItem==="Facilities"){
+      navigate(`/${menuItem}`)
+      setAnchorEl(null);
+    }
+    setOpenMenuKey(null)
+  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -113,9 +122,15 @@ const Header = (props) => {
                 MenuListProps={{
                   'aria-labelledby': `toolbar-button-${index}`,
                 }}
+                onClick={()=>handleNav(keyName, 0)}
               >
                 {mainNav[keyName].map((k, i) => {
-                  return <MenuItem key={`${k}-${i}`} onClick={handleClose}>{k}</MenuItem>
+                  return <MenuItem sx={{
+                    '&:hover': {
+                      backgroundColor: "rgba(50, 168, 82, 0.7)",
+                      color:"white"
+                    },
+                  }} key={`${k}-${i}`} onClick={()=>handleNav(k, i)}>{k}</MenuItem>
                 })}
               </Menu>
             </React.Fragment>

@@ -1,0 +1,24 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    .heading {
+        padding: 1.5%;
+        color: #1F3A7E;
+    }
+    .content-layout{
+        display: flex;
+        width: 100%;
+        padding: 2%;
+        .content-layout-left {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            .layout-stepper {
+
+            }
+        }
+        .content-layout-right {
+            width: 80%;
+        }
+    }
+}
