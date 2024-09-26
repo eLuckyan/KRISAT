@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Button } from "rsuite";
-import HomeContent from '../../Services/Utils/json/HomeContent'; 
+import HomeContent from '../../services/utils/json/HomeContent'; 
 import SendIcon from '@mui/icons-material/Send';
 import PhotoGallery from "../../Components/Gallery/PhotoGallery";
 
