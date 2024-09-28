@@ -46,14 +46,50 @@ const Header = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // const handleNav = (menuItem, index) => {
+  //   console.log(menuItem, index)
+  //   if(menuItem==="Facilities"){
+  //     navigate(`/${menuItem}`)
+  //     setAnchorEl(null);
+  //   }
+  //   setOpenMenuKey(null)
+  // }
+
   const handleNav = (menuItem, index) => {
-    console.log(menuItem, index)
-    if(menuItem==="Facilities"){
-      navigate(`/${menuItem}`)
-      setAnchorEl(null);
+    let path = "";
+    switch (menuItem) {
+        case "About Us":
+            path = `/AboutUs/${index}`;
+            break;
+        case "Farming":
+            path = `/Farming/${index}`;
+            break;
+        case "Academics":
+            path = `/Academics/${index}`;
+            break;
+        case "Academic Activities":
+            path = `/AcademicActivities/${index}`;
+            break;
+        case "Life @ KRISAT":
+            path = `/LifeKRISAT/${index}`;
+            break;
+        case "Facilities":
+            path = `/Facilities/${index}`;
+            break;
+        case "Nursery":
+            path = `/Nursery/${index}`;
+            break;
+        case "Rules & Regulations":
+            path = `/RulesRegulations/${index}`;
+            break;
+        default:
+            path = "/"; // Fallback to home
     }
-    setOpenMenuKey(null)
-  }
+
+    navigate(path);
+    setAnchorEl(null);
+    setOpenMenuKey(null);
+};
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -122,16 +158,24 @@ const Header = (props) => {
                 MenuListProps={{
                   'aria-labelledby': `toolbar-button-${index}`,
                 }}
-                onClick={()=>handleNav(keyName, 0)}
               >
                 {mainNav[keyName].map((k, i) => {
-                  return <MenuItem sx={{
-                    '&:hover': {
-                      backgroundColor: "rgba(50, 168, 82, 0.7)",
-                      color:"white"
-                    },
-                  }} key={`${k}-${i}`} onClick={()=>handleNav(k, i)}>{k}</MenuItem>
+                  return (
+                    <MenuItem 
+                      key={`${k}-${i}`} 
+                      onClick={() => handleNav(keyName, i)} // Use handleNav here
+                      sx={{
+                        '&:hover': {
+                          backgroundColor: "rgba(50, 168, 82, 0.7)",
+                          color: "white"
+                        },
+                      }}
+                    >
+                      {k}
+                    </MenuItem>
+                  );
                 })}
+
               </Menu>
             </React.Fragment>
             //console.log(keyName, index, mainNav[keyName])
