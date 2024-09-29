@@ -1,5 +1,3 @@
-import React from "react";
-
 import faci from "../../../Assets/Images/img_faci.jpg"
 import infra from "../../../Assets/Images/img_infra.jpg"
 

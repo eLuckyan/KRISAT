@@ -13,4 +13,4 @@ const ContentData = () => {
     return {staticData}
 }
 
-export default ContentData
+export default ContentData;

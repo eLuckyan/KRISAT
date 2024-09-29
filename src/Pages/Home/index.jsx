@@ -15,10 +15,11 @@ import SendIcon from '@mui/icons-material/Send';
 import PhotoGallery from "../../Components/Gallery/PhotoGallery";
 import NewsLetterLabel from "../../Components/NewsLetterLabel/NewsLetterLabel";
 import { useNavigate } from "react-router-dom";
-import HomeContent from '../../Services/Utils/json/HomeContent';
+import HomeContent from '../../Services/utils/json/HomeContent';
 
 const Home = () => {
   const { aboutContent } = HomeContent();
+  console.log({ aboutContent })
   const navigate = useNavigate()
   return (
     <>
@@ -39,7 +40,7 @@ const Home = () => {
           <h2>About KRISAT</h2>
         </div>
         <div className="about-content">
-        {aboutContent.map((content, index) => {
+        {aboutContent?.map((content, index) => {
           return (
               <Card sx={{ maxWidth: 395 }} className="content1" key={index}>
                 <div className="content-header">
