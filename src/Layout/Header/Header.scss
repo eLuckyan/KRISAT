@@ -19,13 +19,13 @@
                 align-items: center;
                 justify-content: left;
                 img {
-                    height: 5vh !important;
-                    width: auto !important;
+                    height: 10vh;
+                    width: auto;
                     padding: 1vw;
                 }
                 .header-college-name{
                     h1 {
-                        font-size: 3vw;
+                        font-size: 2.9vw;
                     }
                     h4 {
                         font-size: 2.5vw;
@@ -57,10 +57,10 @@
                 }
                 .header-college-name{
                     h1 {
-                        font-size: 2.2vw !important;
+                        font-size: 2.2vw;
                     }
                     h4 {
-                        font-size: 1.5vw !important;
+                        font-size: 1.5vw;
                     }
                 }
             }
@@ -83,11 +83,11 @@
                 }
             }
             .menu-toggle {
-                display: none !important;
+                display: none;
             }
         }
         .header-bottom {
-            display: flex !important;
+            display: flex;
             margin-top: 1vw;
             .nav-button {
                 font-size: 1vw;
@@ -100,7 +100,7 @@
     .header-toolbar {
         .header-bottom {
             .nav-button {
-                font-size: 1.2vw !important;
+                font-size: 1.2vw;
             }
         }
     }
