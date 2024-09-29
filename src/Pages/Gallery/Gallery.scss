@@ -1,0 +1,56 @@
+
+.slick-next{
+    right: 0!important;
+}
+.image-slider-inner-div{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+.image-slider-parent{
+
+}
+.styled-title {
+    display: flex;
+    align-items: center; // Vertically center the content
+    font-family: 'Georgia', serif; // Use a serif font for a classic look
+    color: #a0522d; // Adjust the text color to match the image
+    flex-direction: column;
+    h1 {
+      font-size: 36px; // Adjust font size as needed
+      margin: 0;
+      font-weight: bold; // Make the title bold
+    }
+  
+    .year {
+      font-size: 24px; // Smaller font for the year
+      margin-left: 10px; // Space between title and year
+      margin-right: 10px; // Space between year and arrow
+    }
+  
+    .arrow {
+      font-size: 24px; // Match the font size of the year
+      margin-left: 5px; // Small space before the arrow
+    }
+  }
+  
+  .image-slider-second{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}

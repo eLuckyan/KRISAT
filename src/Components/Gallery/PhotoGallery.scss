@@ -56,3 +56,20 @@
 .gallery-collection-section span {
   color: white;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .gallery-img-first,
+  .vertical-img {
+    width: 320px !important;
+  }
+
+  .gallery-img-third,
+  .gallery-img-second {
+    width: 150px !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}

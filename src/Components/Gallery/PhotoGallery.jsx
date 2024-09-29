@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-
+import { useNavigate } from "react-router-dom";
 import "./PhotoGallery.scss";
 const itemData = [
   {
@@ -57,6 +57,7 @@ const itemData = [
 ];
 
 const CalendarComponent = ({ date }) => {
+ 
   return (
     <>
       <div className="gallery-calendar-div">
@@ -82,9 +83,11 @@ const CollectionNameComponent = ({ collectionName }) => {
 };
 
 const PhotoGallery = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box
+        onClick={() => navigate("/Gallery")}
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -109,7 +112,7 @@ const PhotoGallery = () => {
                 height: "25vh",
                 width: "520px",
               }}
-              className="gallery-img"
+              className="gallery-img gallery-img-first"
               src={`https://images.unsplash.com/photo-1519710164239-da123dc03ef4`}
               loading="lazy"
             />
@@ -124,7 +127,7 @@ const PhotoGallery = () => {
               <CalendarComponent date="Sept 16" />
               <CollectionNameComponent collectionName="UGC HANDBOOK" />
               <img
-                className="gallery-img"
+                className="gallery-img gallery-img-second"
                 style={{
                   height: "25vh",
                   width: "250px",
@@ -137,7 +140,7 @@ const PhotoGallery = () => {
               <CalendarComponent date="May 1" />
               <CollectionNameComponent collectionName="CONVOCATION 2024" />
               <img
-                className="gallery-img"
+                className="gallery-img gallery-img-third"
                 style={{
                   height: "25vh",
                   width: "250px",
@@ -156,7 +159,6 @@ const PhotoGallery = () => {
             style={{
               height: "50vh",
             }}
-            width="100%"
             src={`https://images.unsplash.com/photo-1519710164239-da123dc03ef4`}
             loading="lazy"
           />
