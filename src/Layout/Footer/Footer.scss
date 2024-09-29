@@ -41,6 +41,7 @@ footer {
     align-items: flex-start;
     span {
       font-size: 14px;
+      text-align: start;
     }
   }
 
@@ -159,30 +160,27 @@ footer {
   }
 
   .footer-clg-name {
-
     @media (max-width: 768px) {
       margin-left: 0; // Removes margin on smaller screens.
     }
 
     h2 {
-
       @media only screen and (min-width: 320px) and (max-width: 768px) {
-        font-size: .8rem!important;
+        font-size: 0.8rem !important;
       }
 
       @media (min-width: 768px) {
-        font-size: 1rem!important; // Smaller font on mobile.
+        font-size: 1rem !important; // Smaller font on mobile.
       }
     }
 
     h5 {
-
       @media only screen and (min-width: 320px) and (max-width: 768px) {
-        font-size: .6rem!important;
+        font-size: 0.6rem !important;
       }
 
       @media (max-width: 768px) {
-        font-size: 0.7rem!important;
+        font-size: 0.7rem !important;
       }
     }
   }
@@ -192,18 +190,22 @@ footer {
     height: 70px;
 
     @media (max-width: 768px) {
-      width: 50px!important;
-      height: 50px!important;
+      width: 50px !important;
+      height: 50px !important;
     }
   }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .footer-clg-details{
+  .footer-clg-details {
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
-  .footer-clg-address{
+  .footer-clg-address {
     text-align: center;
+  }
+  .footer-clg-locations .footer-clg-address span, .footer-clg-contact span {
+    font-size: 12px!important;
   }
 }

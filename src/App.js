@@ -4,7 +4,8 @@ import Layout from "./Layout/Main";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import StaticTemplate from "./Layout/StaticTemplate";
-import contentData from './services/utils/json/contentData'
+// import contentData from './services/utils/json/contentData'
+import contentData from "./Services/Utils/json/contentData";
 import Gallery from "./Pages/Gallery";
 
 function App() {
