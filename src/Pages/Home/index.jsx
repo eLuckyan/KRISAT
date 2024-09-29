@@ -11,11 +11,11 @@ import {
   Typography,
 } from "@mui/material";
 import { Button } from "rsuite";
-import HomeContent from '../../services/utils/json/HomeContent'; 
 import SendIcon from '@mui/icons-material/Send';
 import PhotoGallery from "../../Components/Gallery/PhotoGallery";
 import NewsLetterLabel from "../../Components/NewsLetterLabel/NewsLetterLabel";
 import { useNavigate } from "react-router-dom";
+import HomeContent from '../../Services/Utils/json/HomeContent';
 
 const Home = () => {
   const { aboutContent } = HomeContent();

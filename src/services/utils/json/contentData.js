@@ -1,4 +1,4 @@
-const contentData = () => {
+const ContentData = () => {
     const staticData = {
         "Facilities": ['College View', 'Infrastructure', 'Laboratory', 'Observatory', 'MI room', "Smart Class", "Exam Hall", "Cafeteria", "Gym", "Mess"],
         "About Us": ['History', 'About KRISAT', 'Mission & Vision', 'Board Members', 'Governing Council', 'From Principal Desk'],
@@ -13,4 +13,4 @@ const contentData = () => {
     return {staticData}
 }
 
-export default contentData
+export default ContentData

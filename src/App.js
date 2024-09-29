@@ -4,7 +4,9 @@ import Layout from "./Layout/Main";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import StaticTemplate from "./Layout/StaticTemplate";
-import contentData from './services/utils/json/contentData'
+// import contentData from './services/utils/json/contentData'
+import contentData from "./Services/Utils/json/contentData";
+import Gallery from "./Pages/Gallery";
 
 function App() {
   const {staticData} = contentData();
@@ -16,6 +18,7 @@ function App() {
             <Route path="/" index element={<Home />}></Route>
             <Route path="/Home" index element={<Home />}></Route>
             <Route path="/About" element={<About />}></Route>
+            <Route path="/Gallery" element={<Gallery />}></Route>
             <Route path="/AboutUs/:index?" element={<StaticTemplate navItem={"AboutUs"} subNav={staticData["About Us"]} content="AboutUs Content" />} />
             <Route path="/Farming/:index?" element={<StaticTemplate navItem={"Farming"} subNav={staticData["Farming"]} content="Farming Content" />} />
             <Route path="/Academics/:index?" element={<StaticTemplate navItem={"Academics"} subNav={staticData["Academics"]} content="Academics Content" />} />

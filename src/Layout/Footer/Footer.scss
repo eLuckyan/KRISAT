@@ -1,5 +1,4 @@
 footer {
-
   // position: fixed;
   left: 0;
   bottom: 0;
@@ -30,6 +29,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-clg-locations {
@@ -41,6 +41,7 @@ footer {
     align-items: flex-start;
     span {
       font-size: 14px;
+      text-align: start;
     }
   }
 
@@ -129,15 +130,82 @@ footer {
 .footer-third-item {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 5%;
   padding: 15px;
   align-items: center;
-  span{
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  span {
     font-weight: bold;
   }
-  .footer-copy-right{
+  .footer-copy-right {
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .footer-essential {
+    display: none !important;
+  }
+
+  .footer-third-item {
+    flex-direction: column-reverse;
+  }
+}
+
+.footer-clg-icon {
+  @media (max-width: 768px) {
+  }
+
+  .footer-clg-name {
+    @media (max-width: 768px) {
+      margin-left: 0; // Removes margin on smaller screens.
+    }
+
+    h2 {
+      @media only screen and (min-width: 320px) and (max-width: 768px) {
+        font-size: 0.8rem !important;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1rem !important; // Smaller font on mobile.
+      }
+    }
+
+    h5 {
+      @media only screen and (min-width: 320px) and (max-width: 768px) {
+        font-size: 0.6rem !important;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.7rem !important;
+      }
+    }
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+
+    @media (max-width: 768px) {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .footer-clg-details {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-clg-address {
+    text-align: center;
+  }
+  .footer-clg-locations .footer-clg-address span, .footer-clg-contact span {
+    font-size: 12px!important;
   }
 }
