@@ -14,10 +14,12 @@ import { Button } from "rsuite";
 import SendIcon from '@mui/icons-material/Send';
 import PhotoGallery from "../../Components/Gallery/PhotoGallery";
 import NewsLetterLabel from "../../Components/NewsLetterLabel/NewsLetterLabel";
+import { useNavigate } from "react-router-dom";
 import HomeContent from '../../Services/Utils/json/HomeContent';
 
 const Home = () => {
   const { aboutContent } = HomeContent();
+  const navigate = useNavigate()
   return (
     <>
       <div className="home-banner">
@@ -26,11 +28,11 @@ const Home = () => {
           <span className="banner-content">
             <h1>Sowing Seeds of Future</h1>
             <p>
-              Affiliated by Tamil Nadu Agricultural university, Coimbatore, as per G.O.(Ms).No.98,Agriculture(AU) Department dt.29.12.2016, Counsel of Tamilnadu.
+              Affiliated by Tamil Nadu Agricultural university, Coimbatore, as per G.O.(Ms).No.98, Agriculture(AU) Department dt.29.12.2016, Counsel of Tamilnadu.
             </p>
           </span>
          </div>
-          <Button className="button" variant="contained" endIcon={<SendIcon />}>EXPLORE &nbsp; </Button>
+          <Button className="button" variant="contained" endIcon={<SendIcon />} onClick={()=>navigate("/LifeKRISAT/4")}>EXPLORE &nbsp; </Button>
       </div>
       <div className="home-about">
         <div className="about-heading">
