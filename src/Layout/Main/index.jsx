@@ -12,9 +12,9 @@ const Layout = () => {
         <Box>
           <Header />
         </Box>
-        <Box>
+        {/* <Box>
           <SideNav />
-        </Box>
+        </Box> */}
         <Box>
           <Outlet />
         </Box>

@@ -116,7 +116,7 @@ const Header = (props) => {
     <>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <CssBaseline />
-        <AppBar component="nav">
+        <>
           <Toolbar className="header-toolbar">
             <Box className="header-top">
               <span className="header-top-left" onClick={() => nav('/')}>
@@ -191,8 +191,8 @@ const Header = (props) => {
               ))}
             </Box>
           </Toolbar>
-        </AppBar>
-        <nav>
+        </>
+        {mobileOpen && <nav>
           <Drawer
             container={container}
             variant="temporary"
@@ -211,7 +211,7 @@ const Header = (props) => {
           >
             {drawer}
           </Drawer>
-        </nav>
+        </nav>}
       </Box>
     </>
   );
